@@ -12,7 +12,7 @@
 @base <https://w3id.org/emmo/domain/multilayeredmaterial#> .
 
 <https://w3id.org/emmo/domain/multilayeredmaterial> rdf:type owl:Ontology ;
-                                                     owl:versionIRI <https://w3id.org/emmo/domain/multilayeredmaterial/0.0.1/multilayeredmaterial> ;
+                                                     owl:versionIRI <https://w3id.org/emmo/domain/multilayeredmaterial/1.0.0/multilayeredmaterial> ;
                                                      owl:imports <https://w3id.org/emmo/1.0.0/perspectives/holistic> ,
                                                                  <https://w3id.org/emmo/1.0.0/reference/persholistic> ;
                                                      dcterms:abstract "Ontology to model multi-layered materials."@en ;
