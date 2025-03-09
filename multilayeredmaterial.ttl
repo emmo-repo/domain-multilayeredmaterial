@@ -1,0 +1,164 @@
+@prefix : <https://w3id.org/emmo/domain/multilayeredmaterial#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix mulma: <https://w3id.org/emmo/domain/multilayeredmaterial#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@base <https://w3id.org/emmo/domain/multilayeredmaterial#> .
+
+<https://w3id.org/emmo/domain/multilayeredmaterial> rdf:type owl:Ontology ;
+                                                     owl:versionIRI <https://w3id.org/emmo/domain/multilayeredmaterial/0.0.1/multilayeredmaterial> ;
+                                                     owl:imports <https://w3id.org/emmo/1.0.0/perspectives/holistic> ,
+                                                                 <https://w3id.org/emmo/1.0.0/reference/persholistic> ;
+                                                     dcterms:abstract "Ontology to model multi-layered materials."@en ;
+													 dcterms:creator <https://orcid.org/0000-0002-5174-8508> ;
+                                                     dcterms:contributor <https://orcid.org/0000-0002-4181-2852> ,
+                                                                         <https://orcid.org/0000-0002-5174-8508> ;
+                                                     dcterms:created "2025-03-07" ;
+                                                     dcterms:license "https://creativecommons.org/licenses/by/4.0/legalcode" ;
+                                                     dcterms:publisher <https://emmc.eu> ;
+                                                     dcterms:title "Multi-layered materials ontology"@en ;
+													 vann:preferredNamespacePrefix "mullma"@en ;
+                                                     vann:preferredNamespaceUri "https://w3id.org/emmo/domain/multilayeredmaterial/0.0.1/multilayeredmaterial" ;
+                                                     rdfs:comment "Requires HermiT reasoner plugin in order to visualize all inferences and class hierarchy (ctrl+R hotkey in Protege)."@en ;
+                                                     owl:versionInfo "0.0.1" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/alternative
+dcterms:alternative rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/bibliographicCitation
+dcterms:bibliographicCitation rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/created
+dcterms:created rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+dcterms:description rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/hasFormat
+dcterms:hasFormat rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/identifier
+dcterms:identifier rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/issued
+dcterms:issued rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/modified
+dcterms:modified rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/source
+dcterms:source rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/ontology/bibo/doi
+bibo:doi rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/ontology/bibo/status
+bibo:status rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#preflabel
+skos:preflabel rdf:type owl:AnnotationProperty .
+
+
+###  http://xmlns.com/foaf/0.1/homepage
+<http://xmlns.com/foaf/0.1/homepage> rdf:type owl:AnnotationProperty .
+
+
+###  http://xmlns.com/foaf/0.1/logo
+<http://xmlns.com/foaf/0.1/logo> rdf:type owl:AnnotationProperty .
+
+
+###  http://xmlns.com/foaf/0.1/name
+<http://xmlns.com/foaf/0.1/name> rdf:type owl:AnnotationProperty .
+
+
+###  http://xmlns.com/foaf/0.1/page
+<http://xmlns.com/foaf/0.1/page> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://w3id.org/emmo/domain/multilayeredmaterial#EMMO_4220458f_b4f4_4a15_88a9_e8772468f4a5
+mulma:EMMO_4220458f_b4f4_4a15_88a9_e8772468f4a5 rdf:type owl:ObjectProperty ;
+                                                rdfs:subPropertyOf <https://w3id.org/emmo#EMMO_3c7f239f_e833_4a2b_98a1_c88831770c1b> ;
+                                                rdfs:domain mulma:EMMO_77bd023a_9572_4ebc_beb3_169fbcb446fb ;
+                                                rdfs:range mulma:EMMO_358df008_3d0e_4b9e_a4c9_b916d5f05ca1 ;
+                                                rdfs:label "hasLayer"@it ;
+                                                <https://w3id.org/emmo#EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9> "Establishes a compositional relationship between a Multi-layered Material and the individual Layers that form its structure."@en .
+
+
+###  https://w3id.org/emmo/domain/multilayeredmaterial#EMMO_f45d1d01_5d1f_4e96_93ff_eb57f26e8e24
+mulma:EMMO_f45d1d01_5d1f_4e96_93ff_eb57f26e8e24 rdf:type owl:ObjectProperty ;
+                                                rdfs:subPropertyOf <https://w3id.org/emmo#EMMO_54d0d0f4_d9fa_4179_a9b5_4110c49dafff> ;
+                                                rdf:type owl:AsymmetricProperty ;
+                                                rdfs:domain mulma:EMMO_358df008_3d0e_4b9e_a4c9_b916d5f05ca1 ;
+                                                rdfs:range mulma:EMMO_358df008_3d0e_4b9e_a4c9_b916d5f05ca1 ;
+                                                rdfs:label "hasUpperLayer"@en ;
+                                                skos:prefLabel "hasUpperLayer"@en ;
+                                                <https://w3id.org/emmo#EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9> "Structural ordering relationship between layers in a multi-layered Material, indicating that one layer (the range) is positioned above another (the domain)."@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://w3id.org/emmo/domain/multilayeredmaterial#EMMO_358df008_3d0e_4b9e_a4c9_b916d5f05ca1
+mulma:EMMO_358df008_3d0e_4b9e_a4c9_b916d5f05ca1 rdf:type owl:Class ;
+                                                rdfs:subClassOf <https://w3id.org/emmo#EMMO_f76884f7_964e_488e_9bb7_1b2453e9e817> ;
+                                                rdfs:label "Layer" ;
+                                                skos:prefLabel "Layer"@it ;
+                                                <https://w3id.org/emmo#EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9> "Distinct structural component of a multi-layered material, characterized by its specific composition, thickness, and functional properties, which contribute to the overall performance of the material."@en .
+
+
+###  https://w3id.org/emmo/domain/multilayeredmaterial#EMMO_77bd023a_9572_4ebc_beb3_169fbcb446fb
+mulma:EMMO_77bd023a_9572_4ebc_beb3_169fbcb446fb rdf:type owl:Class ;
+                                                rdfs:subClassOf <https://w3id.org/emmo#EMMO_65a007dc_2550_46b0_b394_3346c67fbb69> ;
+                                                rdfs:label "MultilayeredMaterial"@en ;
+                                                skos:prefLabel "MultilayeredMaterial"@en ;
+                                                <https://w3id.org/emmo#EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9> "A composite material consisting of two or more distinct layers arranged in a specific order, where each layer retains its distinct characteristics while contributing to the integrated properties of the whole material."@en .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <https://w3id.org/emmo#EMMO_b9522e56_1fac_4766_97e6_428605fabd3e>
+                <https://w3id.org/emmo#EMMO_c0f72631_d7c2_434c_9c26_5c44123df682>
+                <https://w3id.org/emmo#EMMO_f93fe78b_9646_4a15_b88b_1c93686a764d>
+                mulma:EMMO_77bd023a_9572_4ebc_beb3_169fbcb446fb
+              )
+] .
+
+
+###  Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi
