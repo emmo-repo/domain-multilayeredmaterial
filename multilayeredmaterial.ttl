@@ -16,14 +16,14 @@
                                                      owl:imports <https://w3id.org/emmo/1.0.0/perspectives/holistic> ,
                                                                  <https://w3id.org/emmo/1.0.0/reference/persholistic> ;
                                                      dcterms:abstract "Ontology to model multi-layered materials."@en ;
-													 dcterms:creator <https://orcid.org/0000-0002-5174-8508> ;
                                                      dcterms:contributor <https://orcid.org/0000-0002-4181-2852> ,
                                                                          <https://orcid.org/0000-0002-5174-8508> ;
                                                      dcterms:created "2025-03-07" ;
+                                                     dcterms:creator <https://orcid.org/0000-0002-5174-8508> ;
                                                      dcterms:license "https://creativecommons.org/licenses/by/4.0/legalcode" ;
                                                      dcterms:publisher <https://emmc.eu> ;
                                                      dcterms:title "Multi-layered materials ontology"@en ;
-													 vann:preferredNamespacePrefix "mullma"@en ;
+                                                     vann:preferredNamespacePrefix "mullma"@en ;
                                                      vann:preferredNamespaceUri "https://w3id.org/emmo/domain/multilayeredmaterial/0.0.1/multilayeredmaterial" ;
                                                      rdfs:comment "Requires HermiT reasoner plugin in order to visualize all inferences and class hierarchy (ctrl+R hotkey in Protege)."@en ;
                                                      owl:versionInfo "0.0.1" .
@@ -134,7 +134,12 @@ mulma:EMMO_f45d1d01_5d1f_4e96_93ff_eb57f26e8e24 rdf:type owl:ObjectProperty ;
 
 ###  https://w3id.org/emmo/domain/multilayeredmaterial#EMMO_358df008_3d0e_4b9e_a4c9_b916d5f05ca1
 mulma:EMMO_358df008_3d0e_4b9e_a4c9_b916d5f05ca1 rdf:type owl:Class ;
-                                                rdfs:subClassOf <https://w3id.org/emmo#EMMO_f76884f7_964e_488e_9bb7_1b2453e9e817> ;
+                                                rdfs:subClassOf <https://w3id.org/emmo#EMMO_f76884f7_964e_488e_9bb7_1b2453e9e817> ,
+                                                                [ rdf:type owl:Restriction ;
+                                                                  owl:onProperty [ owl:inverseOf <https://w3id.org/emmo#EMMO_3c7f239f_e833_4a2b_98a1_c88831770c1b>
+                                                                                 ] ;
+                                                                  owl:someValuesFrom mulma:EMMO_77bd023a_9572_4ebc_beb3_169fbcb446fb
+                                                                ] ;
                                                 rdfs:label "Layer" ;
                                                 skos:prefLabel "Layer"@it ;
                                                 <https://w3id.org/emmo#EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9> "Distinct structural component of a multi-layered material, characterized by its specific composition, thickness, and functional properties, which contribute to the overall performance of the material."@en .
@@ -142,7 +147,11 @@ mulma:EMMO_358df008_3d0e_4b9e_a4c9_b916d5f05ca1 rdf:type owl:Class ;
 
 ###  https://w3id.org/emmo/domain/multilayeredmaterial#EMMO_77bd023a_9572_4ebc_beb3_169fbcb446fb
 mulma:EMMO_77bd023a_9572_4ebc_beb3_169fbcb446fb rdf:type owl:Class ;
-                                                rdfs:subClassOf <https://w3id.org/emmo#EMMO_65a007dc_2550_46b0_b394_3346c67fbb69> ;
+                                                rdfs:subClassOf <https://w3id.org/emmo#EMMO_65a007dc_2550_46b0_b394_3346c67fbb69> ,
+                                                                [ rdf:type owl:Restriction ;
+                                                                  owl:onProperty <https://w3id.org/emmo#EMMO_3c7f239f_e833_4a2b_98a1_c88831770c1b> ;
+                                                                  owl:someValuesFrom mulma:EMMO_358df008_3d0e_4b9e_a4c9_b916d5f05ca1
+                                                                ] ;
                                                 rdfs:label "MultilayeredMaterial"@en ;
                                                 skos:prefLabel "MultilayeredMaterial"@en ;
                                                 <https://w3id.org/emmo#EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9> "A composite material consisting of two or more distinct layers arranged in a specific order, where each layer retains its distinct characteristics while contributing to the integrated properties of the whole material."@en .
